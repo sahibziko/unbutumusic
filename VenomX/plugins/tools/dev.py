@@ -42,7 +42,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 )
 async def executor(client: app, message: Message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="<b>ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴇxᴇᴄᴜᴛᴇ ʙᴀʙʏ ?</b>")
+        return await edit_or_reply(message, text="<b>nə edam etmək istəyirsən baby ?</b>")
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
     except IndexError:
@@ -70,7 +70,7 @@ async def executor(client: app, message: Message):
         evaluation += stdout
     else:
         evaluation += "Success"
-    final_output = f"<b>⥤ ʀᴇsᴜʟᴛ :</b>\n<pre language='python'>{evaluation}</pre>"
+    final_output = f"<b>⥤ Resurslar :</b>\n<pre language='python'>{evaluation}</pre>"
     if len(final_output) > 4096:
         filename = "output.txt"
         with open(filename, "w+", encoding="utf8") as out_file:
@@ -127,7 +127,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "» ɪᴛ'ʟʟ ʙᴇ ʙᴇᴛᴛᴇʀ ɪғ ʏᴏᴜ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs ʙᴀʙʏ.", show_alert=True
+                "» limitlərinizdə qalsanız daha yaxşı olar körpə.", show_alert=True
             )
         except:
             return
@@ -152,7 +152,7 @@ async def forceclose_command(_, CallbackQuery):
 )
 async def shellrunner(_, message: Message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="<b>ᴇxᴀᴍᴩʟᴇ :</b>\n/sh git pull")
+        return await edit_or_reply(message, text="<b>Misal :</b>\n/sh git pull")
     text = message.text.split(None, 1)[1]
     if "\n" in text:
         code = text.split("\n")
@@ -166,7 +166,7 @@ async def shellrunner(_, message: Message):
                     stderr=subprocess.PIPE,
                 )
             except Exception as err:
-                await edit_or_reply(message, text=f"<b>ERROR :</b>\n<pre>{err}</pre>")
+                await edit_or_reply(message, text=f"<b>Xəta :</b>\n<pre>{err}</pre>")
             output += f"<b>{code}</b>\n"
             output += process.stdout.read()[:-1].decode("utf-8")
             output += "\n"
