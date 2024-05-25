@@ -165,12 +165,12 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     for x in got:
         j += 1
         if j == 1:
-            msg += f'Streaming :\n\n✨ Title : {x["title"]}\nDuration : {x["dur"]}\nBy : {x["by"]}\n\n'
+            msg += f' 🎵Musiqi oxunur :\n\n✨ Başlıq : {x["title"]}\nMüddət : {x["dur"]}\nBy : {x["by"]}\n\n'
         elif j == 2:
-            msg += f'Queued :\n\n✨ Title : {x["title"]}\nDuration : {x["dur"]}\nBy : {x["by"]}\n\n'
+            msg += f'Növbədə :\n\n✨ Başlıq : {x["title"]}\nMüddət : {x["dur"]}\nBy : {x["by"]}\n\n'
         else:
-            msg += f'✨ Title : {x["title"]}\nDuration : {x["dur"]}\nBy : {x["by"]}\n\n'
-    if "Queued" in msg:
+            msg += f'✨ Başlıq : {x["title"]}\nMüddət : {x["dur"]}\nBy : {x["by"]}\n\n'
+    if "Növbədə" in msg:
         if len(msg) < 700:
             await asyncio.sleep(1)
             return await CallbackQuery.edit_message_text(msg, reply_markup=buttons)
