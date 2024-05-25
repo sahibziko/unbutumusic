@@ -73,7 +73,7 @@ class Userbot(Client):
                 f"Assistant Started as {self.one.name}"
             )
             try:
-                await self.one.send_message(config.LOGGER_ID, f"**» ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
+                await self.one.send_message(config.LOGGER_ID, f"**» Assistent başladı :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
                 )
             except:
                 LOGGER(__name__).error(
@@ -99,7 +99,7 @@ class Userbot(Client):
             else:
                 self.two.name = get_me.first_name
             try:
-                await self.two.send_message(config.LOGGER_ID, f"**» ᴀssɪsᴛᴀɴᴛ ᴛᴡᴏ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.two.id}`\n❄ ɴᴀᴍᴇ : {self.two.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.two.username}"
+                await self.two.send_message(config.LOGGER_ID, f"**» Assistent başladı :**\n\n✨ ɪᴅ : `{self.two.id}`\n❄ ɴᴀᴍᴇ : {self.two.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.two.username}"
                 )
             except:
                 LOGGER(__name__).error(
@@ -128,7 +128,7 @@ class Userbot(Client):
             else:
                 self.three.name = get_me.first_name
             try:
-                await self.three.send_message(config.LOGGER_ID, f"**» ᴀssɪsᴛᴀɴᴛ ᴛʜʀᴇᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.three.id}`\n❄ ɴᴀᴍᴇ : {self.three.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.three.username}"
+                await self.three.send_message(config.LOGGER_ID, f"**» Assistent başladı :**\n\n✨ ɪᴅ : `{self.three.id}`\n❄ ɴᴀᴍᴇ : {self.three.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.three.username}"
                 )
             except:
                 LOGGER(__name__).error(
